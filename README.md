@@ -1,7 +1,30 @@
 ]== rspec_course_in_ruby_on_rails
 
-=== 1. Elements
+]== ETICA Buildfor Web
 
+=== 1. Install
+1. Criar o DataBase
+    rake db:create
+2. Rodar as migrações
+    rake db:migrate
+3. Deve ser criado uma primeira empresa com um usuário admin
+    etica = Empresa.create(nome: "Ética", nome_sistema: "BaseT", email: "suporte@etica-ti.com.br", email_senha: "sem senha")
+    admin = Usuario.new(empresa: etica, login: 'suporte', email: 'suporte@etica-ti.com.br', nova_senha: 'senha123', confirmacao_nova_senha: 'senha123', nome: 'Ética Suporte', admin: true)
+    admin.itens_rastreaveis << etica.itens_rastreaveis.first
+    admin.save
+4. Instalar o ImageMagick
+    Necessário para fazer o upload de imagens
+5. Instalar a libfontconfig
+    Necessário para geração de PDF
+    sudo apt-get install libfontconfig
+
+=== 2. Configurações e Padrões
+
+==== I18n para Javascript
+    Para poder utilizar o I18n nos arquivos .js, quando criar uma nova tradução é preciso rodar o comando 'rake i18n:js:export' para gerar o arquivo de tradução Javascript.
+
+
+=== 1. Elements
 1. describe
     Used for define exemple groups, can input a string or class name.
 2. context
