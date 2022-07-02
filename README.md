@@ -12,7 +12,7 @@
 
 === 2. Matchers
 
-1. expect - 
+1. expect
     1. if the valor is == - 
         expect(actual).to eq(expected)
     2. if x.eql?(y) - 
