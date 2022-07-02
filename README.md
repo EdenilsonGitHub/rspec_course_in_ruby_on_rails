@@ -1,6 +1,7 @@
 ]== rspec_course_in_ruby_on_rails
 
 === 1. Elements
+
 1. describe
     Used for define exemple groups, can input a string or class name.
 2. context
@@ -11,6 +12,7 @@
     Verify if a condition is correctly how to did defined
 
 === 2. Matchers
+
 1. expect
     1. if the valor is ==
         expect(actual).to eq(expected)
@@ -18,6 +20,7 @@
         expect(x).to eql(y)
     3. if x.equal?(y)
         expect(x).to be(y)
+
 2. comparation matchers
     1. if valor is greater than x
         expect(actual).to be > x
@@ -29,11 +32,13 @@
         expect(actual).to be < x
     5. if want to use regular expression
         expect(actual).to match(/expression/)
+
 3. Class matchers/type
     1. if the object is an expected class instance
         expect(actual).to be_an_instance_of(expected)
     2. if object type is expected type
         expect(actual).to be_a(expected)
+
 4. Matchers true/false/nil
     1. ok while the valor isn't false or nil
         expect(actual).to be_truthy
@@ -47,6 +52,7 @@
         expect(actual).to be_nil
     6. ok if the valor isn't nil
         expect(actual).to_not be_nil
+
 5. Errors matchers
     1. if it's get wrong
         expect { ... }.to raise_error
