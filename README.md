@@ -6,7 +6,7 @@
 2. context - 
     Important element for define a tests group. Don't is required, but make more simple and readable.
 3. it - 
-    Define an test case
+    Define a test case
 4. expect - 
     Verify if a condition is correctly how to did defined
 
