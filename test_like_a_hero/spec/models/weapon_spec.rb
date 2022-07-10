@@ -26,4 +26,19 @@ RSpec.describe Weapon, type: :model do
         weapon = build(:weapon)
         expect(weapon).to be_an_instance_of(Weapon)
     end
+
+    it "expect weapon is to be 3000 current_power" do
+        weapon = build(:weapon, power_base: 3000, level: 1, power_step: 300)
+        expect(weapon.current_power).to eq(3000)
+    end
+
+    it "expect weapon is to be 3800 current_power" do
+        weapon = build(:weapon, power_base: 3000, level: 3, power_step: 400)
+        expect(weapon.current_power).to eq(3800)
+    end
+
+    it "expect weapon is to be 4600 current_power" do
+        weapon = build(:weapon, power_base: 4000, level: 3, power_step: 300)
+        expect(weapon.current_power).to eq(4600)
+    end
 end
