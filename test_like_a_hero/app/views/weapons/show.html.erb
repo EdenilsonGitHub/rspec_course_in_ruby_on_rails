@@ -1,0 +1,25 @@
+<h1>Weapons#show</h1>
+<p>Find me in app/views/weapons/show.html.erb</p>
+
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Level</th>
+        <th>Power Base</th>
+        <th>Power Step</th>
+        <th>Current power</th>
+        <th>Title</th>
+    </thead>
+    <tbody>        
+        <td><%= @weapon.id %></td>
+        <td><%= @weapon.name %></td>
+        <td><%= @weapon.description %></td>
+        <td><%= @weapon.level %></td>
+        <td><%= @weapon.power_base %></td>
+        <td><%= @weapon.power_step %></td>
+        <td><%= @weapon.current_power %></td>
+        <td><%= @weapon.title %></td>
+    </tbody>
+</table>
